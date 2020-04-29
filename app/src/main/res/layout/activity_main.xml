@@ -10,9 +10,9 @@
     <EditText
         android:id="@+id/edt1"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="number"
-        android:autofillHints="" />
+        android:layout_height="150dp"
+        android:autofillHints=""
+        android:inputType="number" />
 
     <Button
         android:id="@+id/eight"
@@ -68,7 +68,6 @@
         android:layout_alignEnd="@+id/four"
         android:layout_alignRight="@+id/four"
         android:layout_below="@+id/edt1"
-        android:layout_marginTop="94dp"
         android:text="1"
         android:textColor="#FF5722"
         android:textSize="25sp"
@@ -128,8 +127,6 @@
         android:layout_alignEnd="@+id/edt1"
         android:layout_alignRight="@+id/edt1"
         android:layout_alignTop="@+id/three"
-        android:layout_marginLeft="46dp"
-        android:layout_marginStart="46dp"
         android:layout_toRightOf="@+id/three"
         android:textColor="#FF5722"
         android:textSize="25sp"
@@ -210,14 +207,39 @@
         android:id="@+id/equals"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/divide"
-        android:layout_alignLeft="@+id/decimal"
-        android:layout_alignRight="@+id/divide"
-        android:layout_alignStart="@+id/decimal"
+        android:layout_alignEnd="@+id/clear"
+        android:layout_alignLeft="@+id/zero"
+        android:layout_alignRight="@+id/clear"
+        android:layout_alignStart="@+id/zero"
         android:layout_below="@+id/zero"
-        android:layout_marginTop="37dp"
         android:textColor="#FF5722"
         android:textSize="25sp"
         android:text="=" />
+
+    <Button
+        android:id="@+id/exp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/divide"
+        android:layout_alignLeft="@+id/divide"
+        android:layout_alignRight="@+id/divide"
+        android:layout_alignStart="@+id/divide"
+        android:layout_below="@+id/zero"
+        android:textColor="#FF5722"
+        android:textSize="25sp"
+        android:text="^" />
+
+    <Button
+        android:id="@+id/percent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/decimal"
+        android:layout_alignLeft="@+id/decimal"
+        android:layout_alignRight="@+id/decimal"
+        android:layout_alignStart="@+id/decimal"
+        android:layout_below="@+id/zero"
+        android:textColor="#FF5722"
+        android:textSize="25sp"
+        android:text="%" />
 
 </RelativeLayout>

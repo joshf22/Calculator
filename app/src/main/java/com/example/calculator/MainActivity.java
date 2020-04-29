@@ -5,11 +5,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
     Button one, two, three, four, five, six, seven, eight, nine;
+    EditText editText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,59 +27,60 @@ public class MainActivity extends AppCompatActivity {
         seven = findViewById(R.id.seven);
         eight = findViewById(R.id.eight);
         nine = findViewById(R.id.nine);
+        editText = findViewById(R.id.edt1);
 
         one.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), "1", Toast.LENGTH_SHORT).show();
+                    editText.setText(editText.getText() + "1");
             }
         });
         two.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), "2", Toast.LENGTH_SHORT).show();
+                editText.setText(editText.getText() + "2");
             }
         });
         three.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), "3", Toast.LENGTH_SHORT).show();
+                editText.setText(editText.getText() + "3");
             }
         });
         four.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), "4", Toast.LENGTH_SHORT).show();
+                editText.setText(editText.getText() + "4");
             }
         });
         five.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), "5", Toast.LENGTH_SHORT).show();
+                editText.setText(editText.getText() + "5");
             }
         });
         six.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), "6", Toast.LENGTH_SHORT).show();
+                editText.setText(editText.getText() + "6");
             }
         });
         seven.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), "7", Toast.LENGTH_SHORT).show();
+                editText.setText(editText.getText() + "7");
             }
         });
         eight.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), "8", Toast.LENGTH_SHORT).show();
+                editText.setText(editText.getText() + "8");
             }
         });
         nine.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), "9", Toast.LENGTH_SHORT).show();
+                editText.setText(editText.getText() + "9");
             }
         });
 
