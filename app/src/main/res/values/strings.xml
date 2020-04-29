@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Calculator</string>
+    <string name="seven">Button</string>
+    <string name="eight">Button</string>
+    <string name="nine">Button</string>
+    <string name="four">Button</string>
+    <string name="five">Button</string>
+    <string name="six">Button</string>
+    <string name="one">Button</string>
+    <string name="two">two</string>
+    <string name="three">Button</string>
+</resources>
