@@ -10,7 +10,7 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button one, two, three, four, five, six, seven, eight, nine;
+    Button one, two, three, four, five, six, seven, eight, nine, zero, clear, equals, add, subtract, multiply, divide, decimal, percent, exp;
     EditText editText;
 
     @Override
@@ -27,6 +27,16 @@ public class MainActivity extends AppCompatActivity {
         seven = findViewById(R.id.seven);
         eight = findViewById(R.id.eight);
         nine = findViewById(R.id.nine);
+        zero = findViewById(R.id.zero);
+        clear = findViewById(R.id.clear);
+        equals = findViewById(R.id.equals);
+        add = findViewById(R.id.add);
+        subtract = findViewById(R.id.subtract);
+        multiply = findViewById(R.id.multiply);
+        divide = findViewById(R.id.divide);
+        decimal = findViewById(R.id.decimal);
+        percent = findViewById(R.id.percent);
+        exp = findViewById(R.id.exp);
         editText = findViewById(R.id.numbers);
 
         one.setOnClickListener(new View.OnClickListener() {
@@ -81,6 +91,18 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 editText.setText(editText.getText() + "9");
+            }
+        });
+        zero.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                editText.setText(editText.getText() + "0");
+            }
+        });
+        clear.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                editText.setText("");
             }
         });
 
