@@ -8,13 +8,14 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
-import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
     Button one, two, three, four, five, six, seven, eight, nine, zero, clear, equals, add, subtract, multiply, divide, decimal, exp;
     ImageButton toggle;
     EditText editText;
+    float val1, val2;
+    boolean addition, subtraction, multiplication, division, exponent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -105,6 +106,74 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 editText.setText("");
+            }
+        });
+
+        add.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                val1 = Float.parseFloat(editText.getText() + "");
+                addition = true;
+                editText.setText(null);
+            }
+        });
+        subtract.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                val1 = Float.parseFloat(editText.getText() + "");
+                subtraction = true;
+                editText.setText(null);
+            }
+        });
+        multiply.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                val1 = Float.parseFloat(editText.getText() + "");
+                multiplication = true;
+                editText.setText(null);
+            }
+        });
+        divide.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                val1 = Float.parseFloat(editText.getText() + "");
+                division = true;
+                editText.setText(null);
+            }
+        });
+        exp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                val1 = Float.parseFloat(editText.getText() + "");
+                exponent = true;
+                editText.setText(null);
+            }
+        });
+        equals.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                val2 = Float.parseFloat(editText.getText() + "");
+                if (addition) {
+                    editText.setText(val1 + val2 + "");
+                    addition = false;
+                }
+                if (subtraction) {
+                    editText.setText(val1 - val2 + "");
+                    subtraction = false;
+                }
+                if (multiplication) {
+                    editText.setText(val1 * val2 + "");
+                    multiplication = false;
+                }
+
+                if (division) {
+                    editText.setText(val1 / val2 + "");
+                    division = false;
+                }
+                if (exponent) {
+                    editText.setText(Math.pow(val1, val2) + "");
+                    exponent = false;
+                }
             }
         });
 
