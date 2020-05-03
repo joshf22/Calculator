@@ -10,7 +10,7 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+public class ThirdActivity extends AppCompatActivity {
 
     Button one, two, three, four, five, six, seven, eight, nine, zero, clear, equals, add, subtract, multiply, divide, decimal, exp;
     ImageButton toggle;
@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_third);
 
         one = findViewById(R.id.one);
         two = findViewById(R.id.two);
@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
         one.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                    editText.setText(editText.getText() + "1");
+                editText.setText(editText.getText() + "1");
             }
         });
         two.setOnClickListener(new View.OnClickListener() {
@@ -108,16 +108,16 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        toggleView();
+        toggleViewBack();
 
     }
 
-    private void toggleView() {
+    private void toggleViewBack() {
         ImageButton toggle = findViewById(R.id.toggle);
         toggle.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, SecondActivity.class));
+                startActivity(new Intent(ThirdActivity.this, MainActivity.class));
             }
         });
     }

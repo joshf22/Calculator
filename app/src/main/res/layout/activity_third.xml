@@ -5,8 +5,8 @@
     android:id="@+id/relative1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#13294B"
-    tools:context=".MainActivity">
+    android:background="#00274C"
+    tools:context=".ThirdActivity">
 
     <EditText
         android:id="@+id/numbers"
@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:autofillHints=""
         android:inputType="number"
-        android:textColor="#E84A27"
+        android:textColor="#FFCB05"
         android:textSize="66sp" />
 
     <Button
@@ -25,7 +25,7 @@
         android:layout_alignStart="@+id/five"
         android:layout_below="@+id/five"
         android:text="8"
-        android:backgroundTint="#E84A27"
+        android:backgroundTint="#FFCB05"
         android:textColor="#FFFFFF"
         android:textSize="25sp"
         tools:text="8" />
@@ -37,7 +37,7 @@
         android:layout_below="@+id/one"
         android:layout_toLeftOf="@+id/two"
         android:text="4"
-        android:backgroundTint="#E84A27"
+        android:backgroundTint="#FFCB05"
         android:textColor="#FFFFFF"
         android:textSize="25sp"
         tools:text="4"
@@ -50,7 +50,7 @@
         android:layout_below="@+id/four"
         android:layout_toLeftOf="@+id/two"
         android:text="7"
-        android:backgroundTint="#E84A27"
+        android:backgroundTint="#FFCB05"
         android:textColor="#FFFFFF"
         android:textSize="25sp"
         tools:text="7" />
@@ -63,7 +63,7 @@
         android:layout_alignLeft="@+id/two"
         android:layout_alignStart="@+id/two"
         android:text="5"
-        android:backgroundTint="#E84A27"
+        android:backgroundTint="#FFCB05"
         android:textColor="#FFFFFF"
         android:textSize="25sp"
         tools:text="5" />
@@ -75,7 +75,7 @@
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/numbers"
         android:text="1"
-        android:backgroundTint="#E84A27"
+        android:backgroundTint="#FFCB05"
         android:textColor="#FFFFFF"
         android:textSize="25sp"
         tools:text="1" />
@@ -87,7 +87,7 @@
         android:layout_alignTop="@+id/one"
         android:layout_toRightOf="@id/one"
         android:text="2"
-        android:backgroundTint="#E84A27"
+        android:backgroundTint="#FFCB05"
         android:textColor="#FFFFFF"
         android:textSize="25sp"
         tools:text="2" />
@@ -100,7 +100,7 @@
         android:layout_alignStart="@+id/six"
         android:layout_below="@+id/six"
         android:text="9"
-        android:backgroundTint="#E84A27"
+        android:backgroundTint="#FFCB05"
         android:textColor="#FFFFFF"
         android:textSize="25sp"
         tools:text="9" />
@@ -114,7 +114,7 @@
         android:layout_below="@+id/three"
         android:layout_alignTop="@id/five"
         android:text="6"
-        android:backgroundTint="#E84A27"
+        android:backgroundTint="#FFCB05"
         android:textColor="#FFFFFF"
         android:textSize="25sp"
         tools:text="6" />
@@ -126,7 +126,7 @@
         android:layout_alignTop="@+id/two"
         android:layout_toRightOf="@id/two"
         android:text="3"
-        android:backgroundTint="#E84A27"
+        android:backgroundTint="#FFCB05"
         android:textColor="#FFFFFF"
         android:textSize="25sp"
         tools:text="3" />
@@ -139,7 +139,7 @@
         android:layout_alignRight="@+id/numbers"
         android:layout_alignTop="@+id/three"
         android:layout_toRightOf="@+id/three"
-        android:backgroundTint="#E84A27"
+        android:backgroundTint="#FFCB05"
         android:textColor="#FFFFFF"
         android:textSize="25sp"
         android:text="+" />
@@ -154,7 +154,7 @@
         android:layout_alignStart="@+id/add"
         android:layout_below="@+id/add"
         android:layout_alignTop="@id/six"
-        android:backgroundTint="#E84A27"
+        android:backgroundTint="#FFCB05"
         android:textColor="#FFFFFF"
         android:textSize="25sp"
         android:text="-" />
@@ -168,7 +168,7 @@
         android:layout_alignParentRight="true"
         android:layout_alignStart="@+id/subtract"
         android:layout_below="@+id/subtract"
-        android:backgroundTint="#E84A27"
+        android:backgroundTint="#FFCB05"
         android:textColor="#FFFFFF"
         android:textSize="25sp"
         android:text="*" />
@@ -179,7 +179,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/seven"
         android:layout_toLeftOf="@+id/two"
-        android:backgroundTint="#E84A27"
+        android:backgroundTint="#FFCB05"
         android:textColor="#FFFFFF"
         android:textSize="25sp"
         android:text="." />
@@ -191,7 +191,7 @@
         android:layout_alignLeft="@+id/eight"
         android:layout_alignStart="@+id/eight"
         android:layout_below="@+id/eight"
-        android:backgroundTint="#E84A27"
+        android:backgroundTint="#FFCB05"
         android:textColor="#FFFFFF"
         android:textSize="25sp"
         android:text="0" />
@@ -203,7 +203,7 @@
         android:layout_alignLeft="@+id/nine"
         android:layout_alignStart="@+id/nine"
         android:layout_below="@+id/nine"
-        android:backgroundTint="#E84A27"
+        android:backgroundTint="#FFCB05"
         android:textColor="#FFFFFF"
         android:textSize="25sp"
         android:text="C" />
@@ -217,7 +217,7 @@
         android:layout_alignRight="@+id/multiply"
         android:layout_alignStart="@+id/multiply"
         android:layout_below="@+id/multiply"
-        android:backgroundTint="#E84A27"
+        android:backgroundTint="#FFCB05"
         android:textColor="#FFFFFF"
         android:textSize="25sp"
         android:text="/" />
@@ -232,7 +232,7 @@
         android:layout_alignStart="@+id/zero"
         android:layout_below="@+id/zero"
         android:layout_alignBottom="@id/toggle"
-        android:backgroundTint="#E84A27"
+        android:backgroundTint="#FFCB05"
         android:textColor="#FFFFFF"
         android:textSize="25sp"
         android:text="=" />
@@ -246,7 +246,7 @@
         android:layout_alignRight="@+id/divide"
         android:layout_alignStart="@+id/divide"
         android:layout_below="@+id/zero"
-        android:backgroundTint="#E84A27"
+        android:backgroundTint="#FFCB05"
         android:textColor="#FFFFFF"
         android:textSize="25sp"
         android:layout_alignBottom="@id/toggle"
@@ -261,9 +261,9 @@
         android:layout_alignRight="@+id/decimal"
         android:layout_alignStart="@+id/decimal"
         android:layout_below="@+id/zero"
-        android:backgroundTint="#E84A27"
+        android:backgroundTint="#FFCB05"
         android:textColor="#FFFFFF"
         android:textSize="25sp"
-        android:src="@drawable/ill_logo"/>
+        android:src="@drawable/mich_logo"/>
 
 </RelativeLayout>
