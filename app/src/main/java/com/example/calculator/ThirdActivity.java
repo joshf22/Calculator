@@ -9,11 +9,16 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 
+import java.text.DecimalFormat;
+
 public class ThirdActivity extends AppCompatActivity {
 
     Button one, two, three, four, five, six, seven, eight, nine, zero, clear, equals, add, subtract, multiply, divide, decimal, exp;
     ImageButton toggle;
     EditText editText;
+    float val1, val2;
+    boolean addition, subtraction, multiplication, division, exponent;
+    DecimalFormat df;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +44,7 @@ public class ThirdActivity extends AppCompatActivity {
         decimal = findViewById(R.id.decimal);
         exp = findViewById(R.id.exp);
         editText = findViewById(R.id.numbers);
+        df = new DecimalFormat("#.######");
 
         one.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -100,10 +106,84 @@ public class ThirdActivity extends AppCompatActivity {
                 editText.setText(editText.getText() + "0");
             }
         });
+        decimal.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                editText.setText(editText.getText() + ".");
+            }
+        });
         clear.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 editText.setText("");
+            }
+        });
+
+        add.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                val1 = Float.parseFloat(editText.getText() + "");
+                addition = true;
+                editText.setText(null);
+            }
+        });
+        subtract.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                val1 = Float.parseFloat(editText.getText() + "");
+                subtraction = true;
+                editText.setText(null);
+            }
+        });
+        multiply.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                val1 = Float.parseFloat(editText.getText() + "");
+                multiplication = true;
+                editText.setText(null);
+            }
+        });
+        divide.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                val1 = Float.parseFloat(editText.getText() + "");
+                division = true;
+                editText.setText(null);
+            }
+        });
+        exp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                val1 = Float.parseFloat(editText.getText() + "");
+                exponent = true;
+                editText.setText(null);
+            }
+        });
+        equals.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                val2 = Float.parseFloat(editText.getText() + "");
+                if (addition) {
+                    editText.setText(df.format(val1 + val2) + "");
+                    addition = false;
+                }
+                if (subtraction) {
+                    editText.setText(df.format(val1 - val2) + "");
+                    subtraction = false;
+                }
+                if (multiplication) {
+                    editText.setText(df.format(val1 * val2) + "");
+                    multiplication = false;
+                }
+
+                if (division) {
+                    editText.setText(df.format(val1 / val2) + "");
+                    division = false;
+                }
+                if (exponent) {
+                    editText.setText(df.format(Math.pow(val1, val2)) + "");
+                    exponent = false;
+                }
             }
         });
 
@@ -116,7 +196,7 @@ public class ThirdActivity extends AppCompatActivity {
         toggle.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(ThirdActivity.this, MainActivity.class));
+                startActivity(new Intent(ThirdActivity.this, FourthActivity.class));
             }
         });
     }

@@ -15,7 +15,7 @@
         android:autofillHints=""
         android:inputType="number"
         android:textColor="#FFCB05"
-        android:textSize="66sp" />
+        android:textSize="50sp" />
 
     <Button
         android:id="@+id/eight"

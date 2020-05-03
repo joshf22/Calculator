@@ -9,6 +9,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 
+import java.text.DecimalFormat;
+
 public class MainActivity extends AppCompatActivity {
 
     Button one, two, three, four, five, six, seven, eight, nine, zero, clear, equals, add, subtract, multiply, divide, decimal, exp;
@@ -16,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
     EditText editText;
     float val1, val2;
     boolean addition, subtraction, multiplication, division, exponent;
+    DecimalFormat df;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
         decimal = findViewById(R.id.decimal);
         exp = findViewById(R.id.exp);
         editText = findViewById(R.id.numbers);
+        df = new DecimalFormat("#.######");
 
         one.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -102,6 +106,12 @@ public class MainActivity extends AppCompatActivity {
                 editText.setText(editText.getText() + "0");
             }
         });
+        decimal.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                editText.setText(editText.getText() + ".");
+            }
+        });
         clear.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -154,24 +164,24 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 val2 = Float.parseFloat(editText.getText() + "");
                 if (addition) {
-                    editText.setText(val1 + val2 + "");
+                    editText.setText(df.format(val1 + val2) + "");
                     addition = false;
                 }
                 if (subtraction) {
-                    editText.setText(val1 - val2 + "");
+                    editText.setText(df.format(val1 - val2) + "");
                     subtraction = false;
                 }
                 if (multiplication) {
-                    editText.setText(val1 * val2 + "");
+                    editText.setText(df.format(val1 * val2) + "");
                     multiplication = false;
                 }
 
                 if (division) {
-                    editText.setText(val1 / val2 + "");
+                    editText.setText(df.format(val1 / val2) + "");
                     division = false;
                 }
                 if (exponent) {
-                    editText.setText(Math.pow(val1, val2) + "");
+                    editText.setText(df.format(Math.pow(val1, val2)) + "");
                     exponent = false;
                 }
             }
