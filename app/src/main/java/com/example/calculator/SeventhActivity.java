@@ -11,7 +11,7 @@ import android.widget.ImageButton;
 
 import java.text.DecimalFormat;
 
-public class FifthActivity extends AppCompatActivity {
+public class SeventhActivity extends AppCompatActivity {
 
     Button one, two, three, four, five, six, seven, eight, nine, zero, clear, equals, add, subtract, multiply, divide, decimal, exp;
     ImageButton toggle;
@@ -23,7 +23,7 @@ public class FifthActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_fifth);
+        setContentView(R.layout.activity_seventh);
 
         one = findViewById(R.id.one);
         two = findViewById(R.id.two);
@@ -196,7 +196,7 @@ public class FifthActivity extends AppCompatActivity {
         toggle.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(FifthActivity.this, SixthActivity.class));
+                startActivity(new Intent(SeventhActivity.this, MainActivity.class));
             }
         });
     }
