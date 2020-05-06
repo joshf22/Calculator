@@ -260,16 +260,6 @@ public class SixthActivity extends AppCompatActivity {
         }
     }
 
-    private void toggleView() {
-        ImageButton toggle = findViewById(R.id.toggle);
-        toggle.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, SecondActivity.class));
-            }
-        });
-    }
-
     @Override
     protected void onResume() {
         super.onResume();
